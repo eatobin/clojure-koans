@@ -34,7 +34,7 @@
   (= ["1" "2" "3"] (string/split-lines "1\n2\n3"))
 
   "You may want to make sure your words are backwards"
-  (= __ (string/reverse "hello"))
+  (= "olleh" (string/reverse "hello"))
 
   "Maybe you want to find the index of the first occurrence of a substring"
   (= 0 (string/index-of "hello world" __))
