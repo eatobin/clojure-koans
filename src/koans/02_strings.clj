@@ -37,7 +37,7 @@
   (= "olleh" (string/reverse "hello"))
 
   "Maybe you want to find the index of the first occurrence of a substring"
-  (= 0 (string/index-of "hello world" __))
+  (= 0 (string/index-of "hello world" "h"))
 
   "Or maybe the last index of the same"
   (= __ (string/last-index-of "hello world, hello" "hello"))
