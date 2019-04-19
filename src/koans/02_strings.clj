@@ -31,7 +31,7 @@
   (= "1, 2, 3" (string/join ", " '(1 2 3)))
 
   "Maybe you want to separate out all your lines"
-  (= [__ __ __] (string/split-lines "1\n2\n3"))
+  (= ["1" "2" "3"] (string/split-lines "1\n2\n3"))
 
   "You may want to make sure your words are backwards"
   (= __ (string/reverse "hello"))
