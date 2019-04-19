@@ -22,13 +22,13 @@
   (= false (= \c "c"))
 
   "What if you only wanted to get part of a string?"
-  (= "World" (subs "Hello World" __ __))
+  (= "World" (subs "Hello World" 6 11))
 
   "How about joining together elements in a list?"
-  (= __ (string/join '(1 2 3)))
+  (= "123" (string/join '(1 2 3)))
 
   "What if you wanted to separate them out?"
-  (= "1, 2, 3" (string/join __ '(1 2 3)))
+  (= "1, 2, 3" (string/join ", " '(1 2 3)))
 
   "Maybe you want to separate out all your lines"
   (= [__ __ __] (string/split-lines "1\n2\n3"))
