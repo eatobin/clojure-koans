@@ -40,13 +40,13 @@
   (= 0 (string/index-of "hello world" "h"))
 
   "Or maybe the last index of the same"
-  (= __ (string/last-index-of "hello world, hello" "hello"))
+  (= 13 (string/last-index-of "hello world, hello" "hello"))
 
   "But when something doesn't exist, nothing is found"
-  (= __ (string/index-of "hello world" "bob"))
+  (= nil (string/index-of "hello world" "bob"))
 
   "Sometimes you don't want whitespace cluttering the front and back"
-  (= __ (string/trim "  \nhello world \t \n"))
+  (= "hello world" (string/trim "  \nhello world \t \n"))
 
   "You can check if something is a char"
   (= __ (char? \c))
