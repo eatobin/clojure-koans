@@ -64,7 +64,7 @@
   (= true (string/blank? ""))
 
   "Even if at first glance they aren't"
-  (= __ (string/blank? " \n \t  "))
+  (= true (string/blank? " \n \t  "))
 
   "However, most strings aren't blank"
-  (= __ (string/blank? "hello?\nare you out there?")))
+  (= false (string/blank? "hello?\nare you out there?")))
