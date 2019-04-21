@@ -3,10 +3,10 @@
 
 (meditations
   "Don't get lost when creating a map"
-  (= {:a 1 :b 2} (hash-map :a 1 __ __))
+  (= {:a 1 :b 2} (hash-map :a 1 :b 2))
 
   "A value must be supplied for each key"
-  (= {:a 1} (hash-map :a __))
+  (= {:a 1} (hash-map :a 1))
 
   "The size is the number of entries"
   (= __ (count {:a 1 :b 2}))
