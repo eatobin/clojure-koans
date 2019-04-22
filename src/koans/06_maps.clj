@@ -18,10 +18,10 @@
   (= 1 ({:a 1 :b 2} :a))
 
   "And so can keywords"
-  (= __ (:a {:a 1 :b 2}))
+  (= 1 (:a {:a 1 :b 2}))
 
   "But map keys need not be keywords"
-  (= __ ({2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"} 2014))
+  (= "Sochi" ({2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"} 2014))
 
   "You may not be able to find an entry for a key"
   (= __ (get {:a 1 :b 2} :c))
