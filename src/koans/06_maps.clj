@@ -15,7 +15,7 @@
   (= 2 (get {:a 1 :b 2} :b))
 
   "Maps can be used as functions to do lookups"
-  (= __ ({:a 1 :b 2} :a))
+  (= 1 ({:a 1 :b 2} :a))
 
   "And so can keywords"
   (= __ (:a {:a 1 :b 2}))
