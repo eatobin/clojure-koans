@@ -24,16 +24,16 @@
   (= "Sochi" ({2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"} 2014))
 
   "You may not be able to find an entry for a key"
-  (= __ (get {:a 1 :b 2} :c))
+  (= nil (get {:a 1 :b 2} :c))
 
   "But you can provide your own default"
-  (= __ (get {:a 1 :b 2} :c :key-not-found))
+  (= :key-not-found (get {:a 1 :b 2} :c :key-not-found))
 
   "You can find out if a key is present"
-  (= __ (contains? {:a nil :b nil} :b))
+  (= true (contains? {:a nil :b nil} :b))
 
   "Or if it is missing"
-  (= __ (contains? {:a nil :b nil} :c))
+  (= false (contains? {:a nil :b nil} :c))
 
   "Maps are immutable, but you can create a new and improved version"
   (= {1 "January" 2 __} (assoc {1 "January"} 2 "February"))
