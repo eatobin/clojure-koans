@@ -34,13 +34,16 @@
  "Break up maps by key"
  (= "123 Test Lane, Testerville, TX"
     (let [{street-address :street-address, city :city, state :state} test-address]
-      __))
+      (clojure.string/join ", " [street-address city state])))
 
  "Or more succinctly"
  (= "123 Test Lane, Testerville, TX"
-    (let [{:keys [street-address __ __]} test-address]
-      __))
+    (let [{:keys [street-address city state]} test-address]
+      (clojure.string/join ", " [street-address city state])))
 
  "All together now!"
  (= "Test Testerson, 123 Test Lane, Testerville, TX"
-    (___ ["Test" "Testerson"] test-address)))
+    ((fn [[t tt] ta]
+       (let [{:keys [street-address city state]} ta]
+         (str t " " tt ", " street-address ", " city ", " state)))
+     ["Test" "Testerson"] test-address)))
