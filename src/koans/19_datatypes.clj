@@ -34,7 +34,7 @@
   (= nil (:prize (Pulitzer. "poetry")))
 
   "Further study reveals why"
-  (= __
+  (= [true false]
      (map map? [(Nobel. "chemistry")
                 (Pulitzer. "music")]))
 
